@@ -32,22 +32,16 @@ const lookup = {
 };
 
 function rot13(str) {
-	var decodedString = "";
+	 let decodedArr = []; // Your Result goes here
+  // Only change code below this line
+	for(let i=0; i<str.lenght:i++){
+		if(lookup[str[i]]==undefined){
+			decodedArr.push(str[i])
+ 
+		else decodedArr.push(lookup[str[i]])
+	}
 
-  for (var i = 0; i < encodedString.length; i++) {
-    var charCode = encodedString.charCodeAt(i);
-
-    if (charCode >= 65 && charCode <= 90) {
-      // If it's an uppercase letter (A-Z)
-      var decodedCharCode = ((charCode - 65 + 13) % 26) + 65;
-      decodedString += String.fromCharCode(decodedCharCode);
-    } else {
-      // Non-alphabetic characters
-      decodedString += encodedString.charAt(i);
-    }
-  }
-
-  return decodedString;
+  return; //return decodedArr
 }
   
 
